@@ -25,12 +25,12 @@ rustup default nightly
 
 ```bash
 # 克隆仓库
-git clone https://github.com/你的用户名/你的项目.git
+git clone https://github.com/realsoufaker/rust_shellcode_loader.git
 
 # 进入项目目录
-cd 你的项目
+cd rust_shellcode_loader
 
-
+cargo build
 ```
 
 ## 使用

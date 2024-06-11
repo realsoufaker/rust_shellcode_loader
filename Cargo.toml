@@ -1,0 +1,30 @@
+[package]
+name = "rust_shellcode_loader"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4"
+env_logger = "0.9"
+clap = { version = "3.1", features = ["cargo"] }
+winapi = { version = "0.3", features = ["memoryapi", "winnt", "winuser","heapapi","errhandlingapi"] }
+rust-embed = "6.4.0"
+
+[workspace]
+member = [
+    "temp/asm",
+    "temp/create_fiber",
+    "temp/create_process",
+    "temp/create_remote_thread",
+    "temp/create_remote_thread_native",
+    "temp/create_thread",
+    "temp/create_thread_native",
+    "temp/early_bird",
+    "temp/etwp_create_etw_thread",
+    "temp/memmap2_transmute",
+    "temp/module_stomping",
+    "temp/nt_queue_apc_thread_ex_local",
+    "temp/rtl_create_user_thread",
+]
